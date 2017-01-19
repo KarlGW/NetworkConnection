@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<helpItems 
+  xmlns="http://msh" schema="maml">
+  <command:command
+    xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" 
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"
+    xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-NetworkConnection</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>NetworkConnection</command:noun>
+      <maml:description>
+        <maml:para>Gets network connections on local host.</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-NetworkConnection cmdlet gets the active TCP/UDP connections on the local host
+and returns them as a list of NetworkConnection objects.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-NetworkConnection</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByValue,ByPropertyName)" position="0" aliases="Name,Process">
+          <maml:name>ProcessName</maml:name>
+          <maml:description>
+            Filters the connections by process name.
+          </maml:description>
+          <command:parameterValue required="false">
+            string[]
+          </command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id,PID">
+          <maml:name>ProcessId</maml:name>
+          <maml:description>
+            Filters the connections by process id.
+          </maml:description>
+          <command:parameterValue required="false">
+            int32[]
+          </command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="Connection">
+          <maml:name>State</maml:name>
+          <maml:description>
+            Filters the connections state.
+          </maml:description>
+          <command:parameterValue required="false">
+            string
+          </command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByValue,ByPropertyName)" position="0" aliases="Name,Process">
+        <maml:name>ProcessName</maml:name>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id,PID">
+        <maml:name>ProcessesId</maml:name>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="1" aliases="Connection">
+        <maml:name>State</maml:name>
+      </command:parameter>
+    </command:parameters>
+  </command:command>
+  </helpItems>
