@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" ?> 
+<?xml version="1.0" encoding="utf-8" ?>
 <helpItems 
   xmlns="http://msh" schema="maml">
-  <command:command
-    xmlns:maml="http://schemas.microsoft.com/maml/2004/10"
+  <command:command 
+    xmlns:maml="http://schemas.microsoft.com/maml/2004/10" 
     xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" 
-    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10"
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" 
     xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
       <command:name>Get-NetworkConnection</command:name>
@@ -18,51 +18,140 @@
       </maml:copyright>
     </command:details>
     <maml:description>
-      <maml:para>The Get-NetworkConnection cmdlet gets the active TCP/UDP connections on the local host
-and returns them as a list of NetworkConnection objects.</maml:para>
+      <maml:para>The Get-NetworkConnection cmdlet gets the active TCP/UDP connections on the local hostand returns them as a list of NetworkConnection objects.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-NetworkConnection</maml:name>
-        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByValue,ByPropertyName)" position="0" aliases="Name,Process">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true(ByValue,ByPropertyName)" position="0" aliases="Name,Process">
           <maml:name>ProcessName</maml:name>
           <maml:description>
-            Filters the connections by process name.
+            <maml:para>Filters the connections by process name.</maml:para>
           </maml:description>
-          <command:parameterValue required="false">
-            string[]
-          </command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">String[]</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id,PID">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true(ByPropertyName)" position="named" aliases="Id,PID">
           <maml:name>ProcessId</maml:name>
           <maml:description>
-            Filters the connections by process id.
+            <maml:para>Filters the connections by process id.</maml:para>
           </maml:description>
-          <command:parameterValue required="false">
-            int32[]
-          </command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Int32[]</command:parameterValue>
         </command:parameter>
         <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="Connection">
           <maml:name>State</maml:name>
           <maml:description>
-            Filters the connections state.
+            <maml:para>Filters the connections state.</maml:para>
           </maml:description>
-          <command:parameterValue required="false">
-            string
-          </command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">String</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter required="false" globbing="false" pipelineInput="true (ByValue,ByPropertyName)" position="0" aliases="Name,Process">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true(ByValue,ByPropertyName)" position="0" aliases="Name,Process">
         <maml:name>ProcessName</maml:name>
+        <maml:description>
+          <maml:para>Filters the connections by process name.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false">String[]</command:parameterValue>
       </command:parameter>
-      <command:parameter required="false" globbing="false" pipelineInput="true (ByPropertyName)" position="named" aliases="Id,PID">
-        <maml:name>ProcessesId</maml:name>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true(ByPropertyName)" position="named" aliases="Id,PID">
+        <maml:name>ProcessId</maml:name>
+        <maml:description>
+          <maml:para>Filters the connections by process id.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false">Int32[]</command:parameterValue>
       </command:parameter>
-      <command:parameter required="false" globbing="false" pipelineInput="false" position="1" aliases="Connection">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="Connection">
         <maml:name>State</maml:name>
+        <maml:description>
+          <maml:para>Filters the connections state.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false">String</command:parameterValue>
       </command:parameter>
     </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors />
+    <command:nonTerminatingErrors />
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: Get all active TCP/UDP connections.</maml:title>
+        <maml:introduction></maml:introduction>
+        <dev:code>PS C:\&gt;Get-NetworkConnection</dev:code>
+        <dev:remarks>
+          <maml:para>This command lists all active TCP/UDP connections.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: Get all active TCP/UDP connections with process name svchost.</maml:title>
+        <maml:introduction></maml:introduction>
+        <dev:code>PS C:\&gt;Get-NetworkConnection -ProcessName svchost</dev:code>
+        <dev:remarks>
+          <maml:para>This command lists all active TCP/UDP connections with process name svchost.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>Example 3: Get all active TCP/UDP connections with process name svchost through pipeline.</maml:title>
+        <maml:introduction></maml:introduction>
+        <dev:code>PS C:\&gt;svchost | Get-NetworkConnection</dev:code>
+        <dev:remarks>
+          <maml:para>This command lists all active TCP/UDP connections with process name svchost.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>Example 4: Get all active TCP/UDP connections with process name Skype and stop the related processes.</maml:title>
+        <maml:introduction></maml:introduction>
+        <dev:code>PS C:\&gt;Get-NetworkConnection -ProcessName Skype | Stop-Process</dev:code>
+        <dev:remarks>
+          <maml:para>First it gets all processes that has the name Skype, then it pipes it to Stop-Processes which in turn stops the processes.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+    </command:examples>
   </command:command>
-  </helpItems>
+</helpItems>
