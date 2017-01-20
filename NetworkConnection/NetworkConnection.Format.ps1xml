@@ -4,7 +4,7 @@
     <View>
       <Name>Default</Name>
       <ViewSelectedBy>
-        <TypeName>Kaguwa.Tools.Network.Type.NetworkConnection</TypeName>
+        <TypeName>Kaguwa.Commands.Network.Types.NetworkConnection</TypeName>
       </ViewSelectedBy>
       <TableControl>
         <TableHeaders>

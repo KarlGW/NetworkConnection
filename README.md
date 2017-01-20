@@ -12,8 +12,8 @@ Cmdlet, `Get-NetworkConnection`.
 The components of `Get-NetworkConnection` are the DLLs: `Kaguwa.Commands.Network.dll` and `Kaguwa.Network.dll`.
 Their respective projects can be found:
 
-* [Kaguwa.Commands.Network](https://github.com/KarlGW/Kaguwa.Tools)
-* [Kaguwa.Network](https://github.com/KarlGW/Kaguwa.Helpers)
+* [Kaguwa.Commands.Network](https://github.com/KarlGW/Kaguwa.Commands)
+* [Kaguwa.Network](https://github.com/KarlGW/Kaguwa.Network)
 
 As mentioned earlier more Cmdlets are on the way.
 

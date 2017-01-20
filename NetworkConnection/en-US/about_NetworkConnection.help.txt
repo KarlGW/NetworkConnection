@@ -1,0 +1,20 @@
+PSTOPIC
+    about_NetworkConnection
+
+SHORT DESCRIPTION
+    NetworkConnection is a set of tools for day-to-day administrative tasks.
+
+LONG DESCRIPTION
+    NetworkConnection is a set of tools for day-to-day administrative tasks. 
+    Primary the Cmdlet Get-NetworkConnection.
+
+    You can find full documentation here:
+        https://github.com/KarlGW/NetworkConnection
+
+DETAILED DESCRIPTION
+    NetworkConnection is a module containing a set of Cmdlets for day-to-day administrative tasks.
+    
+    Cmdlets
+    -------
+    Get-NetworkConnection - Returns a list with Kaguwa.Commands.Network.Types.NetworkConnection objects.
+    These represent TCP/UDP connections on the local host.
