@@ -72,6 +72,7 @@ Copy-Item .\NetworkConnection\NetworkConnection -Recurse -Destination $env:PSMod
 Cmdlets listed with short information and description.
 
 
+###Get-NetworkConnection
 Gets active TCP/UDP connections from the local system.
 
 ####Parameters
