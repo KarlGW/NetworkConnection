@@ -68,6 +68,7 @@ git clone https://github.com/KarlGW/NetworkConnection.git
 Copy-Item .\NetworkConnection\NetworkConnection -Recurse -Destination $env:PSModulePath.Split(";")[0]
 ```
 ##<a name="cmdlets">Cmdlets</a>
+Cmdlets listed with short information and description.
 
 ###<a name="getnetworkconnection>`Get-NetworkConnection`</a>
 
