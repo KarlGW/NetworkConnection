@@ -1,5 +1,4 @@
-# Kaguwa Tools
-Kaguwa Tools is a PowerShell module that contains various tools for day-to-day work.
+# NetworkConnection
 At it's initial release (and the initial purpose of the module) it contains but one 
 Cmdlet, `Get-NetworkConnection`. 
 
@@ -10,11 +9,11 @@ Cmdlet, `Get-NetworkConnection`.
 * [Version and Updates](#version)
 
 ##<a name=about>About</a>
-The components of `Get-NetworkConnection` are the DLLs: `Kaguwa.Tools.dll` and `Kaguwa.Helpers.dll`.
+The components of `Get-NetworkConnection` are the DLLs: `Kaguwa.Commands.Network.dll` and `Kaguwa.Network.dll`.
 Their respective projects can be found:
 
-* [Kaguwa.Tools](https://github.com/KarlGW/Kaguwa.Tools)
-* [Kaguwa.Helpers](https://github.com/KarlGW/Kaguwa.Helpers)
+* [Kaguwa.Commands.Network](https://github.com/KarlGW/Kaguwa.Tools)
+* [Kaguwa.Network](https://github.com/KarlGW/Kaguwa.Helpers)
 
 As mentioned earlier more Cmdlets are on the way.
 
@@ -23,8 +22,8 @@ There are various ways on how to install this module. The basic and simplest way
 the project to your local machine and copy it to your user profiles PowerShell module folder:
 
 ```
-git clone https://github.com/KarlGW/KaguwaTools.git
-Copy-Item .\KaguwaTools\KaguwaTools -Recurse -Destination $env:PSModulePath.Split(";")[0]
+git clone https://github.com/KarlGW/NetworkConnection.git
+Copy-Item .\NetworkConnection\NetworkConnection -Recurse -Destination $env:PSModulePath.Split(";")[0]
 ```
 ##<a name="cmdlets">Cmdlets</a>
 
