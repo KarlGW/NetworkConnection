@@ -5,7 +5,6 @@ Cmdlet, `Get-NetworkConnection`.
 * [About](#about)
 * [Installation](#installation)
 * [Cmdlets](#cmdlets)
- * [Get-NetworkConnection](#getnetworkconnection)
 * [Version and Updates](#version)
 
 ##<a name=about>About</a>
@@ -72,7 +71,7 @@ Copy-Item .\NetworkConnection\NetworkConnection -Recurse -Destination $env:PSMod
 Cmdlets listed with short information and description.
 
 
-###<a name="getnetworkconnection>Get-NetworkConnection</a>
+###Get-NetworkConnection
 Gets active TCP/UDP connections from the local system.
 
 ####Parameters
