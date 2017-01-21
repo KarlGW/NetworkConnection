@@ -111,4 +111,5 @@ First release.
 ##<a name="upcoming">Upcoming changes</a>
 
 * Case in-sensitive filtering of ProcessName.
-* Support wildcard for ProcessName (uses Regex in the current version)
+* Support wildcard for ProcessName (uses Regex in the current version).
+* Should be able to make DNS-resolution if a parameter is specified.
