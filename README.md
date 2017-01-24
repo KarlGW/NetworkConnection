@@ -80,7 +80,7 @@ Gets active TCP/UDP connections from the local system.
 |---------------|------------|-----------|----------------------------------------------------|-----------------------------------------------------------|
 | `ProcessName` | *string[]* | False     |                                                    | Filters the returned list by the provided process names.  |
 | `ProcessId`   | *int[]*    | False     |                                                    | Filters the returned list by the provided process ids.    |
-| `State`       | *string*   | False     | *ESTABLISHED*, *LISTENING*, *TIME_WAIT*, *CLOSING* | Filters the returned list by state.
+| `State`       | *string*   | False     | *Established*, *Listening*, *Time_Wait*, *Closing* | Filters the returned list by state.
 
 
 ####Examples
