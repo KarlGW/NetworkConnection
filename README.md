@@ -105,6 +105,16 @@ or
 
 ##<a name="version">Version and Updates</a>
 
+###v0.1.2
+Various fixes.
+
+* Fixed `ProcessId` to only return the correct ProcessId and not everything that begins with that integer.
+* Updated manifest and how it loads the module.
+* Removed unecessary files that were not used.
+
+###v0.1.1
+Fixed manifest with description.
+
 ###v.0.1.0
 First release.
 
