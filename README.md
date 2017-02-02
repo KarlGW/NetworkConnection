@@ -78,9 +78,19 @@ Gets active TCP/UDP connections from the local system.
 
 | Param         | Type       | Mandatory | Allowed Values |                                                           |
 |---------------|------------|-----------|----------------------------------------------------|-----------------------------------------------------------|
-| `ProcessName` | *string[]* | False     |                                                    | Filters the returned list by the provided process names.  |
-| `ProcessId`   | *int[]*    | False     |                                                    | Filters the returned list by the provided process ids.    |
-| `State`       | *string*   | False     | *Established*, *Listening*, *Time_Wait*, *Closing* | Filters the returned list by state.
+| `ProcessName` | *String[]* | False     |                                                    | Filters the returned list by the provided process names.  |
+| `ProcessId`   | *Int[]*    | False     |                                                    | Filters the returned list by the provided process ids.    |
+| `State`       | *String*   | False     | *Established*, *Listening*, *Time_Wait*, *Closing* | Filters the returned list by state.
+
+
+###Get-NetworkConnectionHost
+Gets host name from IP address and IP address from host name.
+
+####Parameters
+
+| Param  | Type       | Mandatory | Allowed Values |                                   |
+|--------|------------|-----------|----------------|-----------------------------------|
+| `Host` | *String[]* | False     |                | Host name/IP address to resolve.  |
 
 
 ####Examples
@@ -89,9 +99,9 @@ To get a complete list of connections.
 
 `Get-NetworkConnection`
 
-To get a list of connections that are listed as ESTABLISHED.
+To get a list of connections that are listed as Established.
 
-`Get-NetworkConnection -State ESTABLISHED`
+`Get-NetworkConnection -State Established`
 
 To get all the connections with with the process name of *chrome* and *svchost*
 
@@ -103,7 +113,45 @@ or
 
 *You can get more examples from `Get-Help Get-NetworkConnection`*
 
+###Get-NetworkConnectionHost
+Gets host name from IP address and IP address from host name.
+
+####Parameters
+
+| Param  | Type       | Mandatory | Allowed Values |                                   |
+|--------|------------|-----------|----------------|-----------------------------------|
+| `Host` | *string[]* | False     |                | Host name/IP address to resolve.  |
+
+
+####Examples
+
+To get the host name and IP address from local host.
+
+`Get-NetworkConnectionHost`
+
+To get resolve multiple entries.
+
+`Get-NetworkConnectionHost -Host 192.168.0.10,codecloudandrants.io,google.com`
+
+To resolve multiple entries from pipeline.
+
+`"codecloudandrants.io","google.com" | Get-NetworkConnectionHost`
+
+To resolve entries from Get-NetworkConnection.
+
+`Get-NetworkConnection -ProcessName chrome | Get-NetworkConnectionHost`
+
+
 ##<a name="version">Version and Updates</a>
+
+###v0.2.0
+Fixes and features.
+
+* Added new cmdlet `Get-NetworkConnectionHost`. Works like the *nix command `host`.
+* Added wildcard support for `ProcessName` in `Get-NetworkConnection` and removed Regex.
+* Added parameter sets so that only one of `ProcessName` and `ProcessId` can be used.
+* `Get-NetworkConnectionHost` can take results from `Get-NetworkConnection` from pipeline.
+* `LocalAddress` and `RemoteAddress` are now `string`s.
 
 ###v0.1.2
 Various fixes.
