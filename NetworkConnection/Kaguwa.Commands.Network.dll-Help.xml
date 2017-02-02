@@ -154,4 +154,129 @@
       </command:example>
     </command:examples>
   </command:command>
+  <command:command 
+    xmlns:maml="http://schemas.microsoft.com/maml/2004/10" 
+    xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" 
+    xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" 
+    xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-NetworkConnectionHost</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>NetworkConnectionHost</command:noun>
+      <maml:description>
+        <maml:para>Returns host name and IP address from a provided hostname or IP address.</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-NetworkConnectionHost cmdlet gets host name and IP address from a provided hostname or IP address.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-NetworkConnectionHost</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true(ByValue,ByPropertyName)" position="0" aliases="IPAddress,Address,RemoteAddress">
+          <maml:name>Host</maml:name>
+          <maml:description>
+            <maml:para>Host name/IP address to resolve.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true(ByValue,ByPropertyName)" position="0" aliases="IPAddress,Address,RemoteAddress">
+        <maml:name>Host</maml:name>
+        <maml:description>
+          <maml:para>Host name/IP address to resolve.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false">String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name></maml:name>
+          <maml:uri></maml:uri>
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors />
+    <command:nonTerminatingErrors />
+    <command:examples>
+      <command:example>
+        <maml:title>Example 1: Get the host name and IP address from local host.</maml:title>
+        <maml:introduction></maml:introduction>
+        <dev:code>PS C:\&gt;Get-NetworkConnectionHost</dev:code>
+        <dev:remarks>
+          <maml:para>This command lists the host name and IP Address of the local host.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: Get resolve multiple entries.</maml:title>
+        <maml:introduction></maml:introduction>
+        <dev:code>PS C:\&gt;Get-NetworkConnectionHost -Host 192.168.0.10,codecloudandrants.io,google.com</dev:code>
+        <dev:remarks>
+          <maml:para>This command resolves the host name/IP Address of 192.168.0.10 and codecloudandrants.io.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>Example 3: Resolve multiple entries from pipeline..</maml:title>
+        <maml:introduction></maml:introduction>
+        <dev:code>PS C:\&gt;"codecloudandrants.io","google.com" | Get-NetworkConnectionHost</dev:code>
+        <dev:remarks>
+          <maml:para>This command resolves the host name/IP Address of 192.168.0.10 and codecloudandrants.io.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+      <command:example>
+        <maml:title>Example 4: resolve entries from Get-NetworkConnection that has process name chrome.</maml:title>
+        <maml:introduction></maml:introduction>
+        <dev:code>PS C:\&gt;Get-NetworkConnection -ProcessName chrome | Get-NetworkConnectionHost</dev:code>
+        <dev:remarks>
+          <maml:para>Get all connections with process name chrome and resolve the RemoteAddress of these with Get-NetworkConnectionHost.</maml:para>
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+    </command:examples>
+  </command:command>
 </helpItems>
