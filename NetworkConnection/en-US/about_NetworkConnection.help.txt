@@ -18,3 +18,5 @@ DETAILED DESCRIPTION
     -------
     Get-NetworkConnection - Returns a list with Kaguwa.Commands.Network.Types.NetworkConnection objects.
     These represent TCP/UDP connections on the local host.
+
+    Get-NetworkConnectionHost - Returns host name and IP address from a provided hostname or IP address.
