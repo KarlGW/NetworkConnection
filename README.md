@@ -7,7 +7,7 @@ Cmdlet, `Get-NetworkConnection`.
 * [Cmdlets](#cmdlets)
 * [Version and Updates](#version)
 
-##<a name=about>About</a>
+## <a name=about>About</a>
 The components of `Get-NetworkConnection` are the DLLs: `Kaguwa.Commands.Network.dll` and `Kaguwa.Network.dll`.
 Their respective projects can be found:
 
@@ -67,14 +67,14 @@ git clone https://github.com/KarlGW/NetworkConnection.git
 Copy-Item .\NetworkConnection\NetworkConnection -Recurse -Destination $env:PSModulePath.Split(";")[0]
 ```
 
-##<a name="cmdlets">Cmdlets</a>
+## <a name="cmdlets">Cmdlets</a>
 Cmdlets listed with short information and description.
 
 
-###Get-NetworkConnection
+### Get-NetworkConnection
 Gets active TCP/UDP connections from the local system.
 
-####Parameters
+#### Parameters
 
 | Param         | Type       | Mandatory | Allowed Values |                                                           |
 |---------------|------------|-----------|----------------------------------------------------|-----------------------------------------------------------|
@@ -83,17 +83,17 @@ Gets active TCP/UDP connections from the local system.
 | `State`       | *String*   | False     | *Established*, *Listening*, *Time_Wait*, *Closing* | Filters the returned list by state.
 
 
-###Get-NetworkConnectionHost
+### Get-NetworkConnectionHost
 Gets host name from IP address and IP address from host name.
 
-####Parameters
+#### Parameters
 
 | Param  | Type       | Mandatory | Allowed Values |                                   |
 |--------|------------|-----------|----------------|-----------------------------------|
 | `Host` | *String[]* | False     |                | Host name/IP address to resolve.  |
 
 
-####Examples
+#### Examples
 
 To get a complete list of connections.
 
@@ -113,17 +113,17 @@ or
 
 *You can get more examples from `Get-Help Get-NetworkConnection`*
 
-###Get-NetworkConnectionHost
+### Get-NetworkConnectionHost
 Gets host name from IP address and IP address from host name.
 
-####Parameters
+#### Parameters
 
 | Param  | Type       | Mandatory | Allowed Values |                                   |
 |--------|------------|-----------|----------------|-----------------------------------|
 | `Host` | *string[]* | False     |                | Host name/IP address to resolve.  |
 
 
-####Examples
+#### Examples
 
 To get the host name and IP address from local host.
 
@@ -142,9 +142,9 @@ To resolve entries from Get-NetworkConnection.
 `Get-NetworkConnection -ProcessName chrome | Get-NetworkConnectionHost`
 
 
-##<a name="version">Version and Updates</a>
+## <a name="version">Version and Updates</a>
 
-###v0.2.0
+### v0.2.0
 Fixes and features.
 
 * Added new cmdlet `Get-NetworkConnectionHost`. Works like the *nix command `host`.
@@ -153,20 +153,20 @@ Fixes and features.
 * `Get-NetworkConnectionHost` can take results from `Get-NetworkConnection` from pipeline.
 * `LocalAddress` and `RemoteAddress` are now `string`s.
 
-###v0.1.2
+### v0.1.2
 Various fixes.
 
 * Fixed `ProcessId` to only return the correct ProcessId and not everything that begins with that integer.
 * Updated manifest and how it loads the module.
 * Removed unecessary files that were not used.
 
-###v0.1.1
+### v0.1.1
 Fixed manifest with description.
 
-###v.0.1.0
+### v.0.1.0
 First release.
 
-##<a name="upcoming">Upcoming changes</a>
+## <a name="upcoming">Upcoming changes</a>
 
 * Case in-sensitive filtering of ProcessName.
 * Support wildcard for ProcessName (uses Regex in the current version).
